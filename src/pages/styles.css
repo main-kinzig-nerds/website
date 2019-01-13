@@ -19,9 +19,12 @@ body {
   flex-direction: column;
 }
 
-.cta {
+main {
   align-self: center;
   margin-top: 3rem;
+}
+
+.cta {
   background-color: #146405;
   color: white;
   padding: 1rem 2rem;
