@@ -1,0 +1,98 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/hack.min.css);
+
+body {
+  font-family: Hack, Courier, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-family: Hack, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10vw;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.logo__main-kinzig {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.logo__nerds {
+  font-weight: 700;
+  text-transform: lowercase;
+  font-size: 1.4em;
+}
+
+.logo__nerds:before {
+  content: '<';
+}
+
+.logo__nerds:after {
+  content: '/>';
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto 0;
+  width: 100%;
+  max-width: calc(1000px - 2rem);
+  padding: 0 2rem;
+}
+
+.tagline {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+}
+
+.main,
+.tagline {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.cta {
+  display: block;
+  background-color: #146405;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s linear;
+}
+
+.cta:active,
+.cta:focus,
+.cta:hover {
+  background-color: #0f3c05;
+}
+
+@media (min-width: 768px) {
+  .cta {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 425px) {
+  .logo {
+    font-size: 3rem;
+  }
+  .cta,
+  .tagline {
+    font-size: 1.25rem;
+  }
+}
