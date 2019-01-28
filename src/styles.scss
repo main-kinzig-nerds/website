@@ -1,0 +1,70 @@
+$primary: #146405;
+$primary-dark: #025523;
+
+body {
+  font-family: Hack, 'Fira Code', 'Courier New', Courier, monospace;
+  background-color: #eaebef;
+  color: #333;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  max-width: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto 0;
+  width: 100%;
+  max-width: calc(1000px - 2rem);
+  padding: 0 2rem;
+}
+
+.tagline {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+}
+
+.main,
+.tagline {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.cta {
+  display: block;
+  background-color: $primary;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $primary-dark;
+  }
+}
+
+@media (min-width: 768px) {
+  .cta {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 425px) {
+  .cta,
+  .tagline {
+    font-size: 1.25rem;
+  }
+}
