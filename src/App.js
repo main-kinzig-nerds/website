@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+import Delay from './components/Delay';
+import GlobalSpinner from './components/GlobalSpinner';
+import Layout from './components/Layout';
+import { FirebaseProvider } from './data';
+import Pages from './pages';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HelmetProvider>
+      <FirebaseProvider>
+        <Layout>
+          <Suspense
+            fallback={
+              <Delay timeout={300}>
+                <GlobalSpinner message="loading..." />
+              </Delay>
+            }
+          >
+            <Pages />
+          </Suspense>
+        </Layout>
+      </FirebaseProvider>
+    </HelmetProvider>
   );
 }
-
-export default App;

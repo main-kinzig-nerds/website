@@ -1,0 +1,17 @@
+@import '../base';
+
+.date {
+  color: $text-muted;
+}
+
+.location {
+  margin-bottom: $spacer * 2;
+}
+
+.description {
+  h2,
+  h3 {
+    margin-top: $spacer * 2;
+    font-size: $h3-font-size;
+  }
+}

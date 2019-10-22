@@ -1,0 +1,8 @@
+$font-family-monospace: Hack, Fira Code, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+$font-family-base: $font-family-monospace;
+
+$primary: #146405;
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
